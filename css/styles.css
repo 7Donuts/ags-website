@@ -806,6 +806,89 @@ section {
   font-size: 0.93rem;
 }
 
+/* --- Expertise Grid (extends values-grid for 6 cards) */
+.expertise-grid {
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+
+/* --- Partner Grid --------------------------- */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.partner-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  transition: all 0.25s;
+}
+
+.partner-card:hover {
+  border-color: rgba(9,194,233,0.45);
+  background: rgba(9,194,233,0.06);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.partner-name {
+  color: var(--text-bright);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.partner-desc {
+  color: var(--text-muted);
+  font-size: 0.83rem;
+}
+
+/* --- Tools Grid ----------------------------- */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.tool-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  transition: all 0.3s;
+}
+
+.tool-card:hover {
+  border-color: rgba(9,194,233,0.4);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.tool-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.5rem;
+}
+
+.tool-card h4 {
+  color: var(--text-bright);
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.tool-card p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
 /* --- Contact Form --------------------------- */
 .contact-layout {
   display: grid;
@@ -1222,6 +1305,9 @@ footer {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .values-grid { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: 1fr; }
+  .partner-grid { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid { grid-template-columns: 1fr; }
   .cmmc-level-grid { grid-template-columns: 1fr; }
   .level-card.level-featured { transform: none; }
   .compliance-overview-grid { grid-template-columns: 1fr; }
@@ -1266,10 +1352,11 @@ footer {
   .cta-section .btn-actions { flex-direction: column; align-items: center; }
   .cta-section .btn-actions .btn { width: 100%; max-width: 320px; justify-content: center; }
 
-  .team-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .partner-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .domains-grid { grid-template-columns: 1fr; }
+  .partner-grid { grid-template-columns: 1fr; }
 }
