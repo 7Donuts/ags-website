@@ -889,6 +889,69 @@ section {
   line-height: 1.55;
 }
 
+/* --- Partner/Tool Category Label ------------ */
+.partner-category-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* --- Industry Grid -------------------------- */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.25rem;
+}
+
+.industry-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  transition: all 0.25s;
+}
+
+.industry-card:hover {
+  border-color: rgba(9,194,233,0.45);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.industry-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(9,194,233,0.1);
+  border: 1px solid rgba(9,194,233,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+  margin-bottom: 1rem;
+}
+
+.industry-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.industry-card h4 {
+  color: var(--text-bright);
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.industry-card p {
+  color: var(--text-muted);
+  font-size: 0.83rem;
+  line-height: 1.55;
+}
+
 /* --- Contact Form --------------------------- */
 .contact-layout {
   display: grid;
@@ -1307,7 +1370,8 @@ footer {
   .values-grid { grid-template-columns: 1fr; }
   .expertise-grid { grid-template-columns: 1fr; }
   .partner-grid { grid-template-columns: repeat(2, 1fr); }
-  .tools-grid { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .industry-grid { grid-template-columns: repeat(2, 1fr); }
   .cmmc-level-grid { grid-template-columns: 1fr; }
   .level-card.level-featured { transform: none; }
   .compliance-overview-grid { grid-template-columns: 1fr; }
@@ -1359,4 +1423,6 @@ footer {
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .domains-grid { grid-template-columns: 1fr; }
   .partner-grid { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .industry-grid { grid-template-columns: 1fr; }
 }
