@@ -603,6 +603,97 @@ section {
   letter-spacing: 0.04em;
 }
 
+/* --- Trust Strip ---------------------------- */
+.trust-strip {
+  background: rgba(22, 46, 82, 0.6);
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 0;
+  overflow: hidden;
+}
+
+.trust-strip-inner {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.trust-strip-label {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-right: 1.5rem;
+  border-right: 1px solid var(--border);
+}
+
+.trust-logos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.trust-logo {
+  height: 20px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.38;
+  transition: opacity 0.2s;
+  display: block;
+}
+
+.trust-logo:hover { opacity: 0.7; }
+
+/* --- Cost / Business Case Grid -------------- */
+.cost-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.cost-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  transition: all 0.25s;
+}
+
+.cost-card:hover {
+  border-color: rgba(9,194,233,0.4);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.cost-card-featured {
+  border-color: rgba(9,194,233,0.4);
+  background: rgba(9,194,233,0.05);
+}
+
+.cost-stat {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--cyan);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.cost-card h4 {
+  color: var(--text-bright);
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.cost-card p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
 /* --- Process Steps -------------------------- */
 .steps-grid {
   display: grid;
@@ -1395,6 +1486,9 @@ footer {
   .cmmc-level-grid { grid-template-columns: 1fr; }
   .level-card.level-featured { transform: none; }
   .compliance-overview-grid { grid-template-columns: 1fr; }
+  .cost-grid { grid-template-columns: 1fr; }
+  .trust-strip-inner { flex-wrap: wrap; gap: 1.25rem; }
+  .trust-strip-label { border-right: none; padding-right: 0; }
 }
 
 @media (max-width: 768px) {
